@@ -210,6 +210,203 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="NightTeam">
+      <meta itemprop="description" content="涉猎的主要编程语言为 Java。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/27/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="post-title-link" itemprop="url">Java虚拟机</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-27 18:24:52 / 修改时间：18:25:56" itemprop="dateCreated datePublished" datetime="2019-11-27T18:24:52+08:00">2019-11-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h1><p><img src="https://ftp.bmp.ovh/imgs/2019/11/905fcf2bc3540e15.png" alt=""><br>##栈</p>
+<ul>
+<li>栈帧<br>每一个方法就是一个栈帧<br>局部变量表：存放局部变量<br>操作数栈：在程序操作中，对操作数临时存放的一块内存区域。<br>动态链接：<br>方法出口：记录方法返回到哪个位置。<br>##程序计数器<br>每个一个线程独有的，记录这个线程马上要运行的哪一行jvm指令码对应的那个内存地址。<br>##元空间</li>
+<li>存放常量</li>
+<li>静态变量</li>
+<li>类员信息<br><img src="https://ftp.bmp.ovh/imgs/2019/11/af71597939776bc7.png" alt=""><br>##本地方法栈<br>是为虚拟机使用到的 Native 方法服务<br>##堆<br><img src="https://ftp.bmp.ovh/imgs/2019/11/39592ed695566f00.png" alt=""></li>
+<li><em>垃圾分析算法*</em><br>将“GC Roots”对象作为七点，从这些节点开始向下搜索引用的对象，找到的对象为非垃圾对象，其余未标记的对象全部为垃圾对象。<br>GC Roots根节点：线程栈的本地变量、静态变量、本地方法栈的变量。</li>
+</ul>
+<p>对象创建后放入Eden区域，Eden区域满后会进行minor gc，垃圾回收存活的对象放入From区域，再次进行minor gc时Eden、From都进行minor gc，完成后将对象放入To区域，在次进行minor gc时Eden、To都进行minor gc，完成后将对象放入From区域，Survicor区域永远有一块是空着的。进行minor gc10次后没有回收的对象会进入老年代，From、To区域满了或存储不下的对象会直接进入老年代。老年代满后会进行Full GC。</p>
+<p>Full GC查找GC Roots时会暂时停止程序的线程，在高并发情况会造成卡顿。</p>
+<p><strong>JVM调优</strong></p>
+<ul>
+<li>降低Full GC发生的概率小一点</li>
+<li>让Full GC的时间短一点</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/#%20Redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="NightTeam">
+      <meta itemprop="description" content="涉猎的主要编程语言为 Java。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/27/#%20Redis/" class="post-title-link" itemprop="url">Redis</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-27 18:24:31 / 修改时间：18:26:59" itemprop="dateCreated datePublished" datetime="2019-11-27T18:24:31+08:00">2019-11-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="String应用场景"><a href="#String应用场景" class="headerlink" title="String应用场景"></a>String应用场景</h2><ul>
+<li><p>单值缓存</p>
+</li>
+<li><p>对象缓存</p>
+</li>
+<li><p>分布式锁</p>
+</li>
+<li><p>计数器</p>
+</li>
+<li><p>Web集群Session共享</p>
+</li>
+<li><p>分布式全局序列号 </p>
+<h2 id="Hash应用场景"><a href="#Hash应用场景" class="headerlink" title="Hash应用场景"></a>Hash应用场景</h2></li>
+<li><p>对象缓存</p>
+</li>
+<li><p>电商购物车<br>优点：同类数据归类整合存储<br>   相比String操作消耗内存与cpu更小<br>   相比String存储更节省空间<br>缺点：过期功能不能使用在field上，只能用在Key上<br>   Redis集群架构下不适合大规模使用</p>
+<h2 id="List应用场景"><a href="#List应用场景" class="headerlink" title="List应用场景"></a>List应用场景</h2></li>
+<li><p>常用数据结构</p>
+</li>
+<li><p>微博和微信公号消息流</p>
+<h2 id="Set应用场景"><a href="#Set应用场景" class="headerlink" title="Set应用场景"></a>Set应用场景</h2></li>
+<li><p>微信抽奖小程序</p>
+</li>
+<li><p>微信、微博点赞、收藏、标签</p>
+</li>
+<li><p>集合操作</p>
+</li>
+<li><p>集合操作实现关注模型</p>
+<h2 id="Zset应用场景"><a href="#Zset应用场景" class="headerlink" title="Zset应用场景"></a>Zset应用场景</h2></li>
+<li><p>集合操作实现排行榜</p>
+</li>
+<li><p>集合操作实现电商品牌筛选</p>
+<h2 id="Redis分布式锁"><a href="#Redis分布式锁" class="headerlink" title="Redis分布式锁"></a>Redis分布式锁</h2><h3 id="Redis分布式锁使用场景"><a href="#Redis分布式锁使用场景" class="headerlink" title="Redis分布式锁使用场景"></a>Redis分布式锁使用场景</h3></li>
+<li><p>互联网秒杀</p>
+</li>
+<li><p>抢优惠卷</p>
+</li>
+<li><p>接口幂等性校验</p>
+<h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p><img src="https://ftp.bmp.ovh/imgs/2019/11/f6de71080c890548.png" alt=""></p>
+<p><strong>实现代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public String deductStock()&#123;</span><br><span class="line">        String lock=&quot;lock&quot;;</span><br><span class="line">        String value1= UUID.randomUUID().toString();</span><br><span class="line">        try &#123;</span><br><span class="line">            Boolean aBoolean = redisTemplate.opsForValue().setIfAbsent(lock, value1, 30, TimeUnit.SECONDS);</span><br><span class="line">            if(!aBoolean)&#123;</span><br><span class="line">                return &quot;error&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            int stock = Integer.parseInt(redisTemplate.opsForValue().get(&quot;stock&quot;));</span><br><span class="line">            if (stock&gt;0)&#123;</span><br><span class="line">                int realStock=stock-1;</span><br><span class="line">                redisTemplate.opsForValue().set(&quot;stock&quot;,realStock+&quot;&quot;);</span><br><span class="line">                System.out.println(&quot;剩余库存&quot;+realStock+&quot;&quot;);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                System.out.println(&quot;库存不足&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            if (value1.equals(redisTemplate.opsForValue().get(lock)))&#123;</span><br><span class="line">                redisTemplate.delete(lock);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;end&quot;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><em>基于Redisson实现*</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public String deductStock()&#123;</span><br><span class="line">        String lock=&quot;lock&quot;;</span><br><span class="line">        RLock redissonlock=redisson.getLock(lock);</span><br><span class="line">        try &#123;</span><br><span class="line">            redissonlock.lock();</span><br><span class="line">            int stock = Integer.parseInt(redisTemplate.opsForValue().get(&quot;stock&quot;));</span><br><span class="line">            if (stock&gt;0)&#123;</span><br><span class="line">                int realStock=stock-1;</span><br><span class="line">                redisTemplate.opsForValue().set(&quot;stock&quot;,realStock+&quot;&quot;);</span><br><span class="line">                System.out.println(&quot;剩余库存&quot;+realStock+&quot;&quot;);</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                System.out.println(&quot;库存不足&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            redissonlock.unlock();</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;end&quot;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -434,20 +631,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
