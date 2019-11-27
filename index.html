@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-27 18:24:52 / 修改时间：18:25:56" itemprop="dateCreated datePublished" datetime="2019-11-27T18:24:52+08:00">2019-11-27</time>
+              <time title="创建时间：2019-11-27 18:24:52 / 修改时间：18:29:49" itemprop="dateCreated datePublished" datetime="2019-11-27T18:24:52+08:00">2019-11-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,12 +260,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h1><p><img src="https://ftp.bmp.ovh/imgs/2019/11/905fcf2bc3540e15.png" alt=""><br>##栈</p>
-<ul>
-<li>栈帧<br>每一个方法就是一个栈帧<br>局部变量表：存放局部变量<br>操作数栈：在程序操作中，对操作数临时存放的一块内存区域。<br>动态链接：<br>方法出口：记录方法返回到哪个位置。<br>##程序计数器<br>每个一个线程独有的，记录这个线程马上要运行的哪一行jvm指令码对应的那个内存地址。<br>##元空间</li>
+          <h1 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h1><p><img src="https://ftp.bmp.ovh/imgs/2019/11/905fcf2bc3540e15.png" alt=""></p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><ul>
+<li>栈帧<br>每一个方法就是一个栈帧<br>局部变量表：存放局部变量<br>操作数栈：在程序操作中，对操作数临时存放的一块内存区域。<br>动态链接：<br>方法出口：记录方法返回到哪个位置。<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2>每个一个线程独有的，记录这个线程马上要运行的哪一行jvm指令码对应的那个内存地址。<h2 id="元空间"><a href="#元空间" class="headerlink" title="元空间"></a>元空间</h2></li>
 <li>存放常量</li>
 <li>静态变量</li>
-<li>类员信息<br><img src="https://ftp.bmp.ovh/imgs/2019/11/af71597939776bc7.png" alt=""><br>##本地方法栈<br>是为虚拟机使用到的 Native 方法服务<br>##堆<br><img src="https://ftp.bmp.ovh/imgs/2019/11/39592ed695566f00.png" alt=""></li>
+<li>类员信息<br><img src="https://ftp.bmp.ovh/imgs/2019/11/af71597939776bc7.png" alt=""><h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2>是为虚拟机使用到的 Native 方法服务<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><img src="https://ftp.bmp.ovh/imgs/2019/11/39592ed695566f00.png" alt=""></li>
 <li><em>垃圾分析算法*</em><br>将“GC Roots”对象作为七点，从这些节点开始向下搜索引用的对象，找到的对象为非垃圾对象，其余未标记的对象全部为垃圾对象。<br>GC Roots根节点：线程栈的本地变量、静态变量、本地方法栈的变量。</li>
 </ul>
 <p>对象创建后放入Eden区域，Eden区域满后会进行minor gc，垃圾回收存活的对象放入From区域，再次进行minor gc时Eden、From都进行minor gc，完成后将对象放入To区域，在次进行minor gc时Eden、To都进行minor gc，完成后将对象放入From区域，Survicor区域永远有一块是空着的。进行minor gc10次后没有回收的对象会进入老年代，From、To区域满了或存储不下的对象会直接进入老年代。老年代满后会进行Full GC。</p>
@@ -294,7 +294,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/#%20Redis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/Redis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -308,7 +308,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/27/#%20Redis/" class="post-title-link" itemprop="url">Redis</a>
+            <a href="/2019/11/27/Redis/" class="post-title-link" itemprop="url">Redis</a>
         </h1>
 
         <div class="post-meta">
